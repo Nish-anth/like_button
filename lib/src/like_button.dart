@@ -391,6 +391,7 @@ class LikeButtonState extends State<LikeButton> with TickerProviderStateMixin {
   }
 
   Widget _createLikeCountWidget(int count, bool isLiked, String text) {
+    var temp;
     if (count < 1000)
       text = count.toString();
     else if (count < 1000000) {
