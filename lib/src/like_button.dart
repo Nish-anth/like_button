@@ -396,11 +396,11 @@ class LikeButtonState extends State<LikeButton> with TickerProviderStateMixin {
       text = count.toString();
     else if (count < 1000000) {
       temp = (count / 1000)
-          .toStringAsFixed(2);
+          .toStringAsFixed(1);
       text = "${temp} K";
     } else if (count >= 1000000) {
       temp = (count / 1000000)
-          .toStringAsFixed(2);
+          .toStringAsFixed(1);
       text = "${temp} M";
     }
     return widget.countBuilder?.call(count, isLiked, text) ??
